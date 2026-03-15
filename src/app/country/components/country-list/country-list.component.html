@@ -1,0 +1,37 @@
+<table class="table table-md mt-2 w-full">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Icon</th>
+      <th>Flag</th>
+      <th>Name</th>
+      <th>Capital</th>
+      <th class="w-8">Population</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+
+    @for (country of countryList(); track country.cca2; let idx = $index) {
+      <tr>
+        <td> {{idx + 1}} </td>
+        <td>{{country.flagIcon}}</td>
+        <td>
+          <img [src]="country.flagSvg" [alt]="country.name"
+          class="w-10" />
+        </td>
+        <td>{{country.name}}</td>
+        <td>{{country.capital}}</td>
+        <td class="text-end">
+          <span class="badge badge-secondary">
+            {{country.population | number}}
+          </span></td>
+        <td class="text-end">
+          <a [routerLink]="['/country/by',country.cca2]" routerLinkActive="router-link-active"  class="link-primary mr-10"> more...</a>
+        </td>
+      </tr>
+    }
+  </tbody>
+
+</table>
+

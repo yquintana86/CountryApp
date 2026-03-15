@@ -1,0 +1,24 @@
+
+<h1 class="text-2xl">By Region</h1>
+<h3 class="text-lg">Select one region</h3>
+
+<section class="flex justify-around">
+  @for (region of regions; track $index) {
+    <button (click)="selectedRegion.set(region)"
+      class="btn btn-outline w-[100]"
+      [class.btn-primary]="this.selectedRegion() === region">{{region}}
+    </button>
+  }
+</section>
+
+
+
+@if(!countriesResource.error() && countriesResource.hasValue())
+{
+<section class="mt-5">
+  <country-list [countryList]="countriesResource.value()" />
+</section>
+}
+@else{
+  <app-not-found/>
+}

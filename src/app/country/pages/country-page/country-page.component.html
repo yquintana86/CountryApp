@@ -1,0 +1,16 @@
+@if(this.countryResource.error() || !this.countryResource.hasValue() )
+{
+  <app-not-found/>
+}
+
+@if(countryResource.isLoading())
+{
+  <h1 class="text-3xl">Loading...</h1>
+}
+
+@if(this.countryResource.hasValue())
+{
+  <country-information [country]="this.countryResource.value()"/>
+}
+
+
