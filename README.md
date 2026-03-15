@@ -1,4 +1,5 @@
 # CountryApp
+<<<<<<< HEAD
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.
 
@@ -57,3 +58,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+Modern Angular application demonstrating Signals, Control Flow syntax, and rxResource for reactive state management and efficient data fetching.
+>>>>>>> 126330d89885ca59a4f3532c71f968293593406a
