@@ -1,63 +1,108 @@
-# CountryApp
-<<<<<<< HEAD
+# Angular Signals + rxResource + Third-Party API Demo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.0.
+This project demonstrates a modern Angular application built using the latest Angular features such as **Signals**, **Control Flow syntax**, and **rxResource** for reactive data management.
+It also integrates with a **third-party REST API** using Angular’s `HttpClient` to fetch and manage external data.
 
-## Development server
+The goal of this project is to showcase a clean and scalable approach to **state management, asynchronous data handling, and API integration** using Angular’s newest reactive primitives.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Signals-based state management
 
-## Code scaffolding
+* Uses **Angular Signals** to manage component state in a reactive and predictable way.
+* Reduces the need for complex RxJS patterns for local state.
+* Automatically updates the UI when state changes.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Modern Angular Control Flow
 
-```bash
-ng generate component component-name
-```
+The project uses the new Angular template syntax:
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+* `@if`
+* `@for`
+* `@switch`
 
-```bash
-ng generate --help
-```
+These provide:
 
-## Building
+* Better readability
+* Improved performance
+* More maintainable templates compared to traditional structural directives.
 
-To build the project run:
+### rxResource for async data management
 
-```bash
-ng build
-```
+* Uses **`rxResource`** to handle asynchronous data fetching.
+* Automatically manages:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+  * Loading state
+  * Error handling
+  * Data updates
+* Integrates seamlessly with Signals for reactive UI updates.
 
-## Running unit tests
+### Third-party API integration
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+* A dedicated **Angular service** uses `HttpClient` to consume a third-party REST API.
+* Demonstrates best practices for:
 
-```bash
-ng test
-```
+  * Data fetching
+  * Separation of concerns
+  * Reusable service architecture.
 
-## Running end-to-end tests
+Example responsibilities of the service:
 
-For end-to-end (e2e) testing, run:
+* Fetch external resources from the API
+* Transform or map API responses
+* Provide Observables that can be consumed by `rxResource`
 
-```bash
-ng e2e
-```
+### Reactive UI updates
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Components react automatically to state changes using Signals, ensuring the UI remains synchronized with the data layer.
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-Modern Angular application demonstrating Signals, Control Flow syntax, and rxResource for reactive state management and efficient data fetching.
->>>>>>> 126330d89885ca59a4f3532c71f968293593406a
+## Architecture Overview
+
+The application follows a clean and maintainable structure:
+
+* **Services**
+
+  * Handle communication with external APIs using `HttpClient`.
+
+* **Resources**
+
+  * `rxResource` manages asynchronous data flows and loading states.
+
+* **Components**
+
+  * Use Signals to maintain reactive UI state.
+
+* **Templates**
+
+  * Implement the new Angular Control Flow syntax for cleaner rendering logic.
+
+---
+
+## Tech Stack
+
+* Angular (latest version)
+* TypeScript
+* RxJS
+* Angular Signals
+* rxResource API
+* HttpClient
+* REST API integration
+
+---
+
+## Purpose
+
+This repository serves as a **learning and reference project** for developers interested in modern Angular patterns.
+
+It demonstrates how to combine:
+
+* **Signals**
+* **rxResource**
+* **HttpClient API services**
+* **Modern template control flow**
+
+to build applications that are **reactive, scalable, and easier to maintain**.
